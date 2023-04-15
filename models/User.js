@@ -26,6 +26,11 @@ const userSchema = new Schema(
             }
         ],
     },
+    {
+        toJSON: {
+          virtuals: true,
+        },
+    }
 )
 
 //virtual property friendCount returns amount of friends a user has on query
