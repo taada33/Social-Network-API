@@ -1,4 +1,5 @@
 const { Schema, model } = require('mongoose');
+const Thought = require('./Thought');
 
 const userSchema = new Schema(
     {
@@ -14,12 +15,10 @@ const userSchema = new Schema(
             unique: true,
             //validate as valid email address
         },
-        thoughts: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'thought',
-            },
-        ],
+        thoughts: [{
+            type: Schema.Types.ObjectId,
+            ref: 'thought',
+        },],
         friends: [
             {
                 type: Schema.Types.ObjectId,
