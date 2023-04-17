@@ -23,7 +23,7 @@ Install the npm packages using "npm i" command. Seed the database by using the "
 
 ## Usage
 
-Use insomnia to provide API requests and to monitor the responses. Please check out this link for a demo on using the code: [https://youtu.be/dQMrfQTFC0g](https://youtu.be/dQMrfQTFC0g)
+Use insomnia to provide API requests and to monitor the responses. Please check out this link for a demo on using the code: [https://www.youtube.com/watch?v=xi9TvTzXPXs](https://www.youtube.com/watch?v=xi9TvTzXPXs)
     
 ## Contributing
 
