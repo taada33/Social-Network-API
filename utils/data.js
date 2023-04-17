@@ -1,7 +1,7 @@
 const userData = [
     {
         username: "Spike",
-        email: "Bang.@email.com",
+        email: "Bang@email.com",
         thoughts: [],
         friends: [],
     },

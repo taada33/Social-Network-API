@@ -7,13 +7,20 @@ const userSchema = new Schema(
             type: String, 
             required: true, 
             unique: true,
+            trim: true,
             //trimmed
         },
         email: { 
             type: String, 
             required: true, 
             unique: true,
-            //validate as valid email address
+            //validation code from https://mongoosejs.com/docs/validation.html#custom-validators, + my own regex
+            validate: {
+                validator: function(v) {
+                  return /\w+@\w+\.\w{2,}/.test(v);
+                },
+                message: props => `${props.value} is not a valid email!`
+              },
         },
         thoughts: [
             {
@@ -32,6 +39,7 @@ const userSchema = new Schema(
         toJSON: {
           virtuals: true,
         },
+        // timestamps: false,
     }
 )
 

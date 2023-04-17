@@ -12,7 +12,7 @@ connection.once('open', async () => {
     const thoughts = thoughtData;
     const users = userData;
     
-    await Thought.collection.insertMany(thoughts);
+    await Thought.insertMany(thoughts);
     const foundThoughts = await Thought.find();
 
     users.forEach((user) =>{
@@ -23,7 +23,7 @@ connection.once('open', async () => {
       })
     })
 
-    await User.collection.insertMany(users);
+    await User.insertMany(users);
 
     console.table(users);
     console.table(thoughts);
